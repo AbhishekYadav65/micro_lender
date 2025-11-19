@@ -72,7 +72,7 @@ class MLService:
             {
                 "success": True,
                 "prediction": float,
-                "probability": float,
+                "probability": int(probability * 10000),
                 "risk_category": str
             }
         """
@@ -93,7 +93,7 @@ class MLService:
             return {
                 "success": True,
                 "prediction": prob_default,
-                "probability": prob_default,
+                "probability": int(prob_default * 10000),
                 "risk_category": risk_cat
             }
 

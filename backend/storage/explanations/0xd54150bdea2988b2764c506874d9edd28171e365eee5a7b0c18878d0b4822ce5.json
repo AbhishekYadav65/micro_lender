@@ -1,0 +1,49 @@
+{
+  "features": {
+    "credit_inquiries": 1.0,
+    "employment_length": 3.0,
+    "loan_amount": 0.5,
+    "loan_term": 30.0,
+    "debt_to_income": 0.22,
+    "income": 50000.0
+  },
+  "prediction": 0.0222,
+  "probability_of_default": 222,
+  "risk_category": "Low",
+  "shap_values": {
+    "income": -0.035,
+    "employment_length": 0.0083,
+    "debt_to_income": 0.0161,
+    "credit_inquiries": -0.0054,
+    "loan_amount": -0.0467,
+    "loan_term": 0.0417
+  },
+  "feature_importance": [
+    {
+      "feature": "loan_amount",
+      "importance": 0.0467
+    },
+    {
+      "feature": "loan_term",
+      "importance": 0.0417
+    },
+    {
+      "feature": "income",
+      "importance": 0.035
+    },
+    {
+      "feature": "debt_to_income",
+      "importance": 0.0161
+    },
+    {
+      "feature": "employment_length",
+      "importance": 0.0083
+    },
+    {
+      "feature": "credit_inquiries",
+      "importance": 0.0054
+    }
+  ],
+  "base_value": 0.1,
+  "timestamp": "2025-11-19T06:57:17.315082"
+}

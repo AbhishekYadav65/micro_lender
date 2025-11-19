@@ -20,6 +20,11 @@ from app.models.schemas import (
     ScoreRequest, ScoreResponse, LoanCreationRequest
 )
 from app.utils.hash_utils import generate_hash
+from app.routes.kyc_routes import router as kyc_router
+from app.routes.ml_routes import router as ml_router
+from app.routes.loan_routes import router as loan_router
+
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -31,6 +36,10 @@ app = FastAPI(
     description="Complete P2P lending platform with KYC, ML scoring, and blockchain integration",
     version="1.0.0"
 )
+
+app.include_router(kyc_router)
+app.include_router(ml_router)
+app.include_router(loan_router)
 
 # CORS middleware
 app.add_middleware(
